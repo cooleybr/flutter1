@@ -24,9 +24,30 @@ class FirstScreen extends StatelessWidget {
       ),
       body: new Checkbox(
         value: false,
-        onChanged: null
+        onChanged: (bool newValue) {
+          Navigator.push(
+            ctxt,
+            new MaterialPageRoute (builder: (ctxt) => new SecondScreen()),
+          );
+        }
       )
     );
+  }
+}
+
+class SecondScreen extends StatelessWidget {
+  @override
+  Widget build (BuildContext ctxt) {
+    return new Scaffold(
+      appBar: new AppBar (
+        title: new Text("second screen"),),
+        body: new Checkbox(
+        value: false,
+        onChanged: (bool newValue) {
+          Navigator.pop(ctxt);
+        }
+      )
+      );
   }
 }
 
