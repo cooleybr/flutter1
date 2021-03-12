@@ -11,7 +11,7 @@ class FirstScreen extends StatelessWidget {
       ),
       body: new Checkbox(
         value: false,
-        onChanged: (bool newValue) {
+        onChanged: (bool? newValue) {
           Navigator.push(
             ctxt,
             new MaterialPageRoute (builder: (ctxt) => new SecondScreen()),
